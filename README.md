@@ -1,7 +1,12 @@
 # Sanic-OAuth
-OAuth for `Sanic`, an async Python Framework
+OAuth middleware extension for `Sanic`, an async framework for Python 3.5+.
 
 ### Overview
-An OAuth extension for use with Sanic, an async framework for Python 3.5+.
+
+### Example
+
+### TODO
+- OAuth1 Support
+- OAuth2 Support
 
 
