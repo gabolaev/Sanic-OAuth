@@ -1,4 +1,4 @@
-class OAuth2Interface:
+class OAuth2:
     
     def __init__(self):
         pass

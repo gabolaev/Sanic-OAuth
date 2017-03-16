@@ -1,5 +1,6 @@
 # Sanic-OAuth
 OAuth Interface for Sanic
+- Includes support for OAuthSessions backed by Sanic Sessions
 
 ### Overview
 

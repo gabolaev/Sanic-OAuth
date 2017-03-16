@@ -1,9 +1,8 @@
-from .oauth1_auth import OAuthInterface
-#from .oauth2_auth import OAuth2Interface
+from .o_auth import *
 
 __author__ = 'Shawn Niederriter'
 
-__version__ = '0.0.2'
+__version__ = '0.0.3'
 
 import logging
 try:
