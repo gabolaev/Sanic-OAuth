@@ -14,7 +14,7 @@ class AuthError(Exception):
     pass
 
 
-class Api(object):
+class Airbnb(object):
     """ Base API class
     >>> api = Api("vtflotci@sharklasers.com", "qwerty")
     >>> api.uid

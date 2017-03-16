@@ -3,14 +3,14 @@ from oauthlib.oauth1 import Client, SIGNATURE_HMAC, SIGNATURE_TYPE_AUTH_HEADER
 from oauthlib.oauth1 import SIGNATURE_TYPE_BODY
 
 
-DEFAULT_HTTP_CONTENT_TYPE = "application/octet-stream"
-CONTENT_TYPE_MULTI_PART = 'multipart/form-data'
+DEFAULT_HTTP_CONTENT_TYPE = 'application/octet-stream'
+CONTENT_TYPE_MULTI_PART = 'multipart/form-data' 
 
-class OAuth1:
+class OAuthInterface:
     
     client = Client
     
-    def __init__(self,client_key,client_secret=None,
+    def __init__(self,app,client_key,session_interface=None,client_secret=None,
             resource_owner_key=None,
             resource_owner_secret=None,
             callback_uri=None,
@@ -21,7 +21,6 @@ class OAuth1:
             client_class=None,
             force_include_body=False,
             **kwargs):
-        self.app = app
-        self.session_interface = session_interface
-        
-    def __getClient__()
+            self.app = app
+            self.client_key = client_key
+            self.session_interface = session_interface
