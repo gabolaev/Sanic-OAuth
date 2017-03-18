@@ -1,22 +1,28 @@
 # Sanic-OAuth
 OAuth Interface for Sanic
-- Includes support for OAuthSessions backed by Sanic Sessions
+- Inspired by flask-oauthlib, relies heavily on oauthlib
+- OAuthClient for remote apps with OAuth1 & 2
+- OAuthSessions for Sanic Sessions
+- Built-in helper functions for authenticating with Airbnb, Facebook, Google, & Twitter
+- Provides support for building your own providers with OAuth 1 & 2
 
 ### Overview
+Sanic-OAuth 0.4.0
+Still in development, working build in package installer by 0.1.0
 
-### Example
+### Sessions Example
 ```
 from sanic import Sanic
 from sanic.response import json
-from sanic_oauth import OAuthInterface
+from sanic_oauth import OAuthSession
 
 
 app = Sanic()
-oauth_interface = OAuthInterface(app,'a91k2n3j',session_interface='inmem')
+oauth_interface = OAuthSession(app,'a91k2n3j',session_interface='inmem')
 
 @app.route("/")
 async def test(request):
-    if request.headers['OAuth-token'] == oauth_interface.client_key:
+    if request.headers['X-OAuth-token'] == oauth_interface.client_key:
         return json({"client_key": oauth_interface.client_key})
     else:
         return json({"404 Error":"Not Authorized"})

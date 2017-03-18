@@ -1,4 +1,4 @@
-from .o_auth import *
+from .client import *
 
 __author__ = 'Shawn Niederriter'
 
