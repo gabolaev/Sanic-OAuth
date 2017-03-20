@@ -1,13 +1,13 @@
-from oauthlib.common import extract_params
-from oauthlib.oauth1 import Client, SIGNATURE_HMAC, SIGNATURE_TYPE_AUTH_HEADER
-from oauthlib.oauth1 import SIGNATURE_TYPE_BODY
-from .providers import *
+from oauthlib.common import extract_params, to_unicode, PY3, add_params_to_uri
+#from oauthlib.oauth1 import Client, SIGNATURE_HMAC, SIGNATURE_TYPE_AUTH_HEADER
+#from oauthlib.oauth1 import SIGNATURE_TYPE_BODY
+from .providers import OAuth1,OAuth2
 
 
 DEFAULT_HTTP_CONTENT_TYPE = 'application/octet-stream'
 CONTENT_TYPE_MULTI_PART = 'multipart/form-data' 
 
-class OAuthSession(object):
+class OAuthProvider(object):
     
     def __init__(self,client_key,auth_type,app=None,session_interface=None,client_secret=None,
         resource_owner_key=None,

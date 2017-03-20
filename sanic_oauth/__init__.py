@@ -1,8 +1,8 @@
-from .client import *
+from .providers import *
 
 __author__ = 'Shawn Niederriter'
 
-__version__ = '0.0.3'
+__version__ = '0.0.5'
 
 import logging
 try:
