@@ -1,4 +1,4 @@
-from .providers import *
+from .provider import *
 
 __author__ = 'Shawn Niederriter'
 
