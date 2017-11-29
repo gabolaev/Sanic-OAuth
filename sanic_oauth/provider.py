@@ -1,7 +1,7 @@
 from oauthlib.common import extract_params, to_unicode, PY3, add_params_to_uri
 #from oauthlib.oauth1 import Client, SIGNATURE_HMAC, SIGNATURE_TYPE_AUTH_HEADER
 #from oauthlib.oauth1 import SIGNATURE_TYPE_BODY
-from .providers import OAuth1,OAuth2
+from .provider import OAuth1,OAuth2
 
 
 DEFAULT_HTTP_CONTENT_TYPE = 'application/octet-stream'
