@@ -11,7 +11,7 @@ Still in development, WORKING BUILD in package installer by 0.1.0
 
 
 ### Provider Example w/ Sanic Sessions
-```
+``` python
 from sanic import Sanic
 from sanic.response import json
 from sanic_oauth import OAuthProvider
